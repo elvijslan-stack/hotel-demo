@@ -3,169 +3,97 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Trattoria da Luigi - Authentische italienische Küche</title>
+    <title>Trattoria da Luigi | Authentische italienische Küche</title>
     <style>
         * { box-sizing: border-box; }
         body { 
             font-family: 'Playfair Display', 'Georgia', serif; 
             margin: 0; 
             padding: 0; 
-            background-color: #fbf9f6; 
+            background-color: #fbf9f4; /* Warmes, mediterranes Cremeweiß */
             color: #3e2723;
         }
 
-        /* Elegante Navigationsleiste */
+        /* Edle Navigationsleiste */
         .navbar {
-            background-color: #1b3d2f; /* Edles italienisches Dunkelgrün */
+            background-color: #1b3d2f; /* Italienisches Dunkelgrün */
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 18px 40px;
+            padding: 20px 40px;
             position: sticky;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+            border-bottom: 2px solid #d4af37; /* Goldene Kante */
         }
 
-        .nav-logo-container {
+        .nav-logo-container { text-decoration: none; color: #fbf9f4; font-size: 1.4rem; font-weight: bold; letter-spacing: 1px; }
+        .nav-links { display: flex; gap: 25px; }
+        .nav-links a { color: rgba(251, 249, 246, 0.85); text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.85rem; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; transition: color 0.3s; }
+        .nav-links a:hover { color: #d4af37; }
+        
+        /* Restaurant Hero-Bereich */
+        .restaurant-hero {
+            text-align: center;
+            padding: 60px 20px 40px 20px;
+            background-color: #1b3d2f;
+            color: white;
+        }
+
+        .restaurant-hero h1 { font-size: 3rem; margin: 0 0 10px 0; font-weight: 400; font-style: italic; color: #d4af37; }
+        .restaurant-hero p { font-size: 1.1rem; font-family: 'Arial', sans-serif; color: #fbf9f4; margin: 0; opacity: 0.9; }
+
+        /* Speisekarten-Struktur (Menu Card) */
+        .menu-container { 
+            max-width: 800px; 
+            margin: 50px auto 100px auto; 
+            background: white; 
+            padding: 50px 40px; 
+            border-radius: 4px; 
+            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            border: 1px solid #e0dcd3;
+            text-align: center;
+        }
+
+        .menu-title { font-size: 2.2rem; color: #1b3d2f; margin-top: 0; margin-bottom: 5px; font-weight: 400; }
+        .menu-subtitle { font-family: 'Arial', sans-serif; font-size: 0.95rem; color: #d4af37; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 40px; font-weight: bold; }
+        
+        .menu-section { margin-bottom: 40px; text-align: left; }
+        .section-heading { font-size: 1.5rem; color: #1b3d2f; border-bottom: 1px solid #e0dcd3; padding-bottom: 8px; margin-bottom: 20px; font-style: italic; }
+
+        .menu-item {
             display: flex;
-            align-items: center;
-            text-decoration: none;
-            color: #fbf9f6;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 15px;
         }
 
-        .nav-brand-name {
-            font-size: 1.3rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            font-weight: 400;
-        }
+        .item-name { font-size: 1.15rem; font-weight: bold; color: #3e2723; }
+        .item-dots { flex-grow: 1; border-bottom: 1px dotted #ccc; margin: 0 15px; }
+        .item-price { font-size: 1.15rem; font-weight: bold; color: #1b3d2f; font-family: 'Arial', sans-serif; }
+        .item-description { font-family: 'Arial', sans-serif; font-size: 0.9rem; color: #7d6b67; margin-top: 4px; margin-bottom: 10px; }
 
-        .nav-links {
-            display: flex;
-            gap: 25px;
-        }
-
-        .nav-links a {
-            color: rgba(251, 249, 246, 0.85);
+        .btn-reserve {
+            display: inline-block;
+            background-color: #1b3d2f;
+            color: white;
+            padding: 12px 30px;
             text-decoration: none;
             font-family: 'Arial', sans-serif;
             font-size: 0.85rem;
+            font-weight: bold;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            font-weight: bold;
-            transition: color 0.3s ease;
-            padding: 5px 0;
+            margin-top: 20px;
+            transition: background 0.3s;
         }
-
-        .nav-links a:hover {
-            color: #ffffff;
-            border-bottom: 1px solid #d4af37; /* Goldener Akzent */
-        }
-        
-        /* Großes, stimmungsvolles Restaurant-Hintergrundbild */
-        .hero-section {
-            background-image: linear-gradient(rgba(27, 61, 47, 0.4), rgba(27, 61, 47, 0.6)), url('https://unsplash.com');
-            background-size: cover;
-            background-position: center;
-            background-repeat: no-repeat;
-            height: 65vh;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color: white;
-            padding: 20px;
-        }
-
-        .hero-section h1 {
-            font-size: 3.8rem;
-            margin: 0 0 10px 0;
-            letter-spacing: 3px;
-            font-weight: 400;
-            text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
-        }
-
-        .hero-section p {
-            font-size: 1.3rem;
-            margin: 0 0 35px 0;
-            font-style: italic;
-            letter-spacing: 1px;
-            font-family: 'Arial', sans-serif;
-            color: #fbf9f6;
-        }
-
-        .btn {
-            display: inline-block;
-            background-color: #d4af37; /* Edles Gold/Ocker */
-            color: #1b3d2f;
-            padding: 15px 35px;
-            text-align: center;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: 'Arial', sans-serif;
-            font-size: 0.9rem;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-        }
-
-        .btn:hover {
-            background-color: #ffffff;
-            color: #1b3d2f;
-            transform: translateY(-2px);
-        }
-
-        /* Schwebender Inhaltsbereich für das Menü-Gefühl */
-        .content-container {
-            max-width: 900px;
-            margin: -60px auto 80px auto;
-            background: white;
-            padding: 60px 40px;
-            border-radius: 4px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
-            text-align: center;
-            position: relative;
-            z-index: 10;
-            border: 1px solid #e0dcd3;
-        }
-
-        .content-container h2 {
-            font-size: 2.4rem;
-            color: #1b3d2f;
-            margin-top: 0;
-            margin-bottom: 15px;
-            font-weight: 400;
-            letter-spacing: 1px;
-        }
-
-        .divider {
-            width: 80px;
-            height: 2px;
-            background-color: #d4af37;
-            margin: 0 auto 25px auto;
-        }
-
-        .content-container p {
-            font-family: 'Arial', sans-serif;
-            font-size: 1.1rem;
-            line-height: 1.8;
-            color: #5d4037;
-            max-width: 700px;
-            margin: 0 auto;
-        }
+        .btn-reserve:hover { background-color: #d4af37; color: #1b3d2f; }
     </style>
 </head>
 <body>
 
-    <!-- Menüleiste -->
     <nav class="navbar">
-        <a href="#" class="nav-logo-container">
-            <span class="nav-brand-name">🇮🇹 Trattoria da Luigi</span>
-        </a>
+        <a href="index.html" class="nav-logo-container">🇮🇹 Trattoria da Luigi</a>
         <div class="nav-links">
             <a href="#">Speisekarte</a>
             <a href="#">Reservierung</a>
@@ -174,21 +102,50 @@
         </div>
     </nav>
 
-    <!-- Hero-Bereich mit italienischem Flair -->
-    <div class="hero-section">
-        <h1>Trattoria da Luigi</h1>
-        <p>Tradition, Leidenschaft und ein Stück Italien im Herzen der Stadt</p>
-        <a href="#" class="btn">Tisch reservieren</a>
+    <div class="restaurant-hero">
+        <h1>Il Gusto della Tradizione</h1>
+        <p>Erleben Sie ein simuliertes italienisches Speiselokal. Nutzen Sie Luigi unten rechts für Fragen oder Reservierungen!</p>
     </div>
 
-    <!-- Einladender Text -->
-    <div class="content-container">
-        <h2>Benvenuti a Casa</h2>
-        <div class="divider"></div>
-        <p>Genießen Sie hausgemachte Pasta, kross gebackene Steinofenpizza und erlesene Weine in gemütlicher, familiärer Atmosphäre. Alle unsere Zutaten beziehen wir erntefrisch direkt von ausgewählten Familienbetrieben aus Italien.</p>
+    <div class="menu-container">
+        <div class="menu-title">Benvenuti a Casa</div>
+        <div class="menu-subtitle">Ein Auszug aus unserer Karte</div>
+        
+        <!-- Sektion 1: Pasta -->
+        <div class="menu-section">
+            <div class="section-heading">Primi Piatti</div>
+            
+            <div class="menu-item">
+                <span class="item-name">Spaghetti Carbonara</span>
+                <span class="item-dots"></span>
+                <span class="item-price">13,00 €</span>
+            </div>
+            <div class="item-description">Original italienisch mit feinstem Guanciale-Speck, frischem Eigelb und Pecorino Romano. Ohne Sahne!</div>
+        </div>
+
+        <!-- Sektion 2: Pizza -->
+        <div class="menu-section">
+            <div class="section-heading">Le Pizze Classiche</div>
+            
+            <div class="menu-item">
+                <span class="item-name">Pizza Margherita</span>
+                <span class="item-dots"></span>
+                <span class="item-price">9,50 €</span>
+            </div>
+            <div class="item-description">Fruchtige Tomatensauce, cremiger Fior di Latte Mozzarella und frisches, aromatisches Basilikum.</div>
+
+            <div class="menu-item">
+                <span class="item-name">Pizza Diavola</span>
+                <span class="item-dots"></span>
+                <span class="item-price">12,50 €</span>
+            </div>
+            <div class="item-description">Mit pikanter kalabrischer Salami, Mozzarella und feurigen Peperoni aus Süditalien.</div>
+        </div>
+
+        <a href="#" class="btn-reserve">Tisch reservieren</a>
     </div>
 
-  <script type="text/javascript">
+<script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
