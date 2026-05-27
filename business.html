@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nexus Consulting | Digitale Infrastruktur & Cloud-Lösungen</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', Arial, sans-serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #f8fafc; 
+            color: #0f172a;
+        }
+
+        /* Seriöse B2B Navigationsleiste */
+        .navbar {
+            background-color: #1e293b; /* Edles Agentur-Anthrazit */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05);
+        }
+
+        .nav-logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #ffffff;
+        }
+
+        .nav-brand-name {
+            font-size: 1.25rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            font-weight: 700;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            color: rgba(255, 255, 255, 0.85);
+            text-decoration: none;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: #2563eb; /* Corporate-Blau als Fokus */
+        }
+        
+        /* Premium Corporate Hero-Bereich */
+        .hero-section {
+            background-image: linear-gradient(rgba(30, 41, 59, 0.6), rgba(30, 41, 59, 0.8)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 60vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.2rem;
+            margin: 0 0 15px 0;
+            letter-spacing: 1px;
+            font-weight: 800;
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin: 0 0 35px 0;
+            color: #cbd5e1;
+            max-width: 600px;
+            line-height: 1.5;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #2563eb; 
+            color: white;
+            padding: 15px 35px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 0.9rem;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #1e293b;
+            transform: translateY(-2px);
+        }
+
+        /* Business Case-Szenario Box */
+        .content-container {
+            max-width: 950px;
+            margin: 60px auto 90px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .content-container h2 {
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+            color: #1e293b;
+        }
+
+        .info-box {
+            background: white;
+            padding: 50px 40px;
+            border-radius: 6px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.03);
+            color: #475569;
+            line-height: 1.8;
+            font-size: 1.1rem;
+            border: 1px solid #e2e8f0;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menüleiste -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo-container">
+            <span class="nav-brand-name">🏢 Nexus Consulting</span>
+        </a>
+        <div class="nav-links">
+            <a href="#">Services</a>
+            <a href="#">Über uns</a>
+            <a href="#">Karriere</a>
+            <a href="#">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero-Bereich -->
+    <div class="hero-section">
+        <h1>Skalierbare IT-Infrastruktur</h1>
+        <p>Wir machen mittelständische Unternehmen fit für die digitale Zukunft. Sicher, performant und cloud-basiert.</p>
+        <a href="#" class="btn">Erstgespräch vereinbaren</a>
+    </div>
+
+    <!-- Info-Bereich -->
+    <div class="content-container">
+        <h2>Effiziente B2B Lead-Qualifizierung</h2>
+        <div class="info-box">
+            <p>Willkommen auf der Demo-Oberfläche für Unternehmen und Dienstleister. Testen Sie unseren virtuellen Vertriebs-Assistenten unten rechts. Er qualifiziert potenzielle Neukunden vollautomatisch, beantwortet Fragen zu unseren Dienstleistungen und fragt bei Interesse nach den Kontaktdaten des Kunden, um nahtlos Termine im Vertrieb vorzubereiten.</p>
+        </div>
+    </div>
+
+<script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6a1753ef60f6b375b8350e14' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
