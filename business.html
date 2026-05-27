@@ -32,9 +32,12 @@
         .nav-links a { color: #64748b; text-decoration: none; font-size: 0.85rem; text-transform: uppercase; font-weight: 600; letter-spacing: 0.5px; }
         .nav-links a:hover { color: #2563eb; }
         
-        /* B2B Header */
+        /* B2B Header mit deinem hochgeladenen Bild */
         .biz-header {
-            background-color: #ffffff;
+            background-image: linear-gradient(rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0.95)), url('https://media.istockphoto.com/id/2254840668/de/foto/glaswandkurve-architekturdetails-modernes-gebäude-außenansicht-futuristische-stadtlandschaft.jpg?s=2048x2048&w=is&k=20&c=J4Thv3X48hQr1z74STbs1KD71D4VAMtYgkJqwOWSM9M=');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             padding: 80px 20px;
             text-align: center;
             border-bottom: 1px solid #e2e8f0;
@@ -60,8 +63,10 @@
             border: 1px solid #e2e8f0;
             text-align: left;
             box-shadow: 0 10px 15px -3px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease;
         }
 
+        .service-card:hover { transform: translateY(-4px); }
         .service-icon { font-size: 2.5rem; margin-bottom: 20px; display: inline-block; }
         .service-title { font-size: 1.3rem; font-weight: 700; margin: 0 0 12px 0; color: #0f172a; }
         .service-text { font-size: 0.95rem; color: #64748b; line-height: 1.6; margin: 0; }
@@ -70,7 +75,7 @@
 <body>
 
     <nav class="navbar">
-        <a href="https://media.istockphoto.com/id/2254840668/de/foto/glaswandkurve-architekturdetails-modernes-gebäude-außenansicht-futuristische-stadtlandschaft.jpg?s=2048x2048&w=is&k=20&c=J4Thv3X48hQr1z74STbs1KD71D4VAMtYgkJqwOWSM9M=" class="nav-logo-container">🏢 Nexus <span>Consulting</span></a>
+        <a href="index.html" class="nav-logo-container">🏢 Nexus <span>Consulting</span></a>
         <div class="nav-links">
             <a href="#">Services</a>
             <a href="#">Über uns</a>
@@ -111,7 +116,7 @@
         </div>
     </div>
 
- <script type="text/javascript">
+  <script type="text/javascript">
   (function(d, t) {
       var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
       v.onload = function() {
