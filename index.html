@@ -3,52 +3,159 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Automatisierung - Live Demos</title>
+    <title>KI-Automatisierung & RAG-Systeme | Live Demos</title>
     <style>
-        body { font-family: 'Arial', sans-serif; background-color: #f4f6f6; margin: 0; padding: 40px 20px; text-align: center; color: #2c3e50; }
-        h1 { color: #1e3a3a; font-size: 2.5rem; margin-bottom: 10px; }
-        .subtitle { font-size: 1.2rem; color: #7f8c8d; margin-bottom: 50px; }
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 30px; max-width: 1200px; margin: 0 auto; }
-        .card { background: white; border-radius: 8px; padding: 30px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-decoration: none; color: inherit; transition: transform 0.3s ease, box-shadow 0.3s ease; border-top: 5px solid #1e3a3a; }
-        .card:hover { transform: translateY(-5px); box-shadow: 0 10px 25px rgba(0,0,0,0.1); }
-        .card h3 { font-size: 1.5rem; margin-top: 0; color: #1e3a3a; }
-        .card p { color: #7f8c8d; line-height: 1.5; font-size: 0.95rem; }
-        .icon { font-size: 3rem; margin-bottom: 15px; display: inline-block; }
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, Arial, sans-serif; 
+            background-color: #0f172a; /* Tiefes, modernes Tech-Dunkelblau */
+            color: #f8fafc; 
+            margin: 0; 
+            padding: 0;
+            line-height: 1.6;
+        }
+
+        /* Hero Section (Oberer moderner Bereich) */
+        .hero {
+            background-image: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 70%);
+            padding: 80px 20px 60px 20px;
+            text-align: center;
+            border-bottom: 1px solid #1e293b;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            margin: 0 0 15px 0;
+            letter-spacing: -1px;
+            background: linear-gradient(to right, #38bdf8, #ffffff);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Portfolio Grid */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px 100px 20px;
+        }
+
+        .grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); 
+            gap: 30px; 
+        }
+
+        /* Premium-Karten */
+        .card { 
+            background: #1e293b; /* Dunkelgrau-Blau für edlen Kontrast */
+            border: 1px solid #334155;
+            border-radius: 12px; 
+            padding: 40px 30px; 
+            text-decoration: none; 
+            color: inherit; 
+            transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Hover-Effekt: Karte hebt sich ab und leuchtet leicht */
+        .card:hover { 
+            transform: translateY(-8px); 
+            border-color: #38bdf8;
+            box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
+            background: #1e293b;
+        }
+
+        .icon { 
+            font-size: 3.5rem; 
+            margin-bottom: 20px; 
+            filter: drop-shadow(0 4px 8px rgba(0,0,0,0.2));
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover .icon {
+            transform: scale(1.1);
+        }
+
+        .card h3 { 
+            font-size: 1.4rem; 
+            margin: 0 0 12px 0; 
+            color: #ffffff;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+
+        .card p { 
+            color: #94a3b8; 
+            line-height: 1.6; 
+            font-size: 0.95rem;
+            margin: 0;
+        }
+
+        /* Kleiner Akzent-Button in der Karte */
+        .card-action {
+            margin-top: auto;
+            padding-top: 25px;
+            color: #38bdf8;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-    <h1>Blazing Fast KI-Chatbots</h1>
-    <p class="subtitle">Wählen Sie eine Branche, um die maßgeschneiderten RAG-Systeme live zu testen.</p>
+    <div class="hero">
+        <h1>Smarte KI-Automatisierung</h1>
+        <p>Erleben Sie maßgeschneiderte RAG- und Agenten-Systeme live im Einsatz. Wählen Sie eine Branche, um die geschützten Prototypen zu testen.</p>
+    </div>
 
-    <div class="grid">
-        <!-- Karte 1: Hotel -->
-        <a href="hotel.html" class="card">
-            <span class="icon">🏔️</span>
-            <h3>Hotellerie</h3>
-            <p>Automatisierter Digital-Concierge für Buchungsfragen, Zimmerinfos und Rezeptionsentlastung.</p>
-        </a>
+    <div class="container">
+        <div class="grid">
+            <!-- Karte 1: Hotel -->
+            <a href="hotel.html" class="card">
+                <span class="icon">🏔️</span>
+                <h3>Hotellerie</h3>
+                <p>Automatisierter Digital-Concierge für Buchungsfragen, Zimmerinfos und spürbare Rezeptionsentlastung.</p>
+                <div class="card-action">Demo öffnen &rarr;</div>
+            </a>
 
-        <!-- Karte 2: Restaurant -->
-        <a href="restaurant.html" class="card">
-            <span class="icon">🍽️</span>
-            <h3>Gastronomie</h3>
-            <p>Intelligenter Bot für Tischreservierungen, Speisekarten-Auskunft und Event-Anfragen.</p>
-        </a>
+            <!-- Karte 2: Restaurant -->
+            <a href="restaurant.html" class="card">
+                <span class="icon">🍽️</span>
+                <h3>Gastronomie</h3>
+                <p>Intelligenter Bot für automatisierte Tischreservierungen, Speisekarten-Auskunft und Allergen-Checks.</p>
+                <div class="card-action">Demo öffnen &rarr;</div>
+            </a>
 
-        <!-- Karte 3: Shop -->
-        <a href="shop.html" class="card">
-            <span class="icon">🛍️</span>
-            <h3>E-Commerce & Retail</h3>
-            <p>Rund-um-die-Uhr Support für Lieferzeiten, Versandkosten und Produktberatung.</p>
-        </a>
+            <!-- Karte 3: Shop -->
+            <a href="shop.html" class="card">
+                <span class="icon">🛍️</span>
+                <h3>E-Commerce</h3>
+                <p>Rund-um-die-Uhr E-Commerce Support für Lieferzeiten, Versandkosten und automatisierte Retouren-Auskunft.</p>
+                <div class="card-action">Demo öffnen &rarr;</div>
+            </a>
 
-        <!-- Karte 4: Vertrieb & Firmen -->
-        <a href="business.html" class="card">
-            <span class="icon">🏢</span>
-            <h3>B2B & Vertrieb</h3>
-            <p>Lead-Generierung, Qualifizierung von Neukunden und automatisierte FAQ-Beantwortung.</p>
-        </a>
+            <!-- Karte 4: Vertrieb & Firmen -->
+            <a href="business.html" class="card">
+                <span class="icon">🏢</span>
+                <h3>B2B & Vertrieb</h3>
+                <p>Effiziente Lead-Generierung, Vor-Qualifizierung von Neukunden und automatisierte Erstgesprächs-Vorbereitung.</p>
+                <div class="card-action">Demo öffnen &rarr;</div>
+            </a>
+        </div>
     </div>
 
 </body>
