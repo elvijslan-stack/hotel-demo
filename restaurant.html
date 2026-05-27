@@ -32,27 +32,48 @@
         .nav-links a { color: rgba(251, 249, 246, 0.85); text-decoration: none; font-family: 'Arial', sans-serif; font-size: 0.85rem; text-transform: uppercase; font-weight: bold; letter-spacing: 1px; transition: color 0.3s; }
         .nav-links a:hover { color: #d4af37; }
         
-        /* Restaurant Hero-Bereich */
+        /* Restaurant Hero-Bereich mit tollem Steinofen-Pizza-Hintergrundbild */
         .restaurant-hero {
+            background-image: linear-gradient(rgba(27, 61, 47, 0.5), rgba(27, 61, 47, 0.7)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
             text-align: center;
-            padding: 60px 20px 40px 20px;
-            background-color: #1b3d2f;
+            padding: 100px 20px;
             color: white;
+            box-shadow: inset 0 0 100px rgba(0,0,0,0.5);
         }
 
-        .restaurant-hero h1 { font-size: 3rem; margin: 0 0 10px 0; font-weight: 400; font-style: italic; color: #d4af37; }
-        .restaurant-hero p { font-size: 1.1rem; font-family: 'Arial', sans-serif; color: #fbf9f4; margin: 0; opacity: 0.9; }
+        .restaurant-hero h1 { 
+            font-size: 3.5rem; 
+            margin: 0 0 15px 0; 
+            font-weight: 400; 
+            font-style: italic; 
+            color: #d4af37; 
+            text-shadow: 2px 2px 15px rgba(0,0,0,0.6);
+        }
+        
+        .restaurant-hero p { 
+            font-size: 1.25rem; 
+            font-family: 'Arial', sans-serif; 
+            color: #fbf9f4; 
+            margin: 0; 
+            opacity: 0.95;
+            text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+        }
 
         /* Speisekarten-Struktur (Menu Card) */
         .menu-container { 
             max-width: 800px; 
-            margin: 50px auto 100px auto; 
+            margin: -40px auto 100px auto; 
             background: white; 
             padding: 50px 40px; 
             border-radius: 4px; 
-            box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
             border: 1px solid #e0dcd3;
             text-align: center;
+            position: relative;
+            z-index: 10;
         }
 
         .menu-title { font-size: 2.2rem; color: #1b3d2f; margin-top: 0; margin-bottom: 5px; font-weight: 400; }
@@ -104,7 +125,7 @@
 
     <div class="restaurant-hero">
         <h1>Il Gusto della Tradizione</h1>
-        <p>Erleben Sie ein simuliertes italienisches Speiselokal. Nutzen Sie Luigi unten rechts für Fragen oder Reservierungen!</p>
+        <p>Erleben Sie ein authentisches italienisches Speiselokal. Nutzen Sie Luigi unten rechts für Fragen oder Reservierungen!</p>
     </div>
 
     <div class="menu-container">
