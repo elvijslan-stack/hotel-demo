@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KI-Automatisierung & RAG-Systeme | Live Demos</title>
+    <title>landmansIT | KI-Automatisierung & RAG-Systeme</title>
     <style>
         * { box-sizing: border-box; }
         body { 
@@ -15,16 +15,51 @@
             line-height: 1.6;
         }
 
+        /* Branding-Bereich ganz oben */
+        .brand-header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding-top: 40px;
+            background-color: #0f172a;
+        }
+
+        .agency-logo {
+            width: 90px; /* Perfekte Größe für das Chrom-Logo */
+            height: auto;
+            filter: drop-shadow(0 0 15px rgba(56, 189, 248, 0.2)); /* Leichter blauer Glow im Hintergrund */
+            margin-bottom: 10px;
+        }
+
+        .agency-name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: #ffffff;
+            margin: 0;
+        }
+
+        .agency-badge {
+            font-family: 'Arial', sans-serif;
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #38bdf8; /* Cyber-Blau */
+            font-weight: bold;
+            margin-top: 5px;
+        }
+
         /* Hero Section (Oberer moderner Bereich) */
         .hero {
             background-image: radial-gradient(circle at top, #1e3a8a 0%, #0f172a 70%);
-            padding: 80px 20px 60px 20px;
+            padding: 30px 20px 60px 20px;
             text-align: center;
             border-bottom: 1px solid #1e293b;
         }
 
         .hero h1 {
-            font-size: 3rem;
+            font-size: 2.6rem;
             font-weight: 800;
             margin: 0 0 15px 0;
             letter-spacing: -1px;
@@ -74,7 +109,6 @@
             transform: translateY(-8px); 
             border-color: #38bdf8;
             box-shadow: 0 12px 30px rgba(56, 189, 248, 0.15);
-            background: #1e293b;
         }
 
         .icon { 
@@ -113,9 +147,26 @@
             letter-spacing: 1px;
             font-weight: bold;
         }
+
+        /* Fußzeile */
+        footer {
+            text-align: center;
+            padding: 30px;
+            color: #64748b;
+            font-size: 0.85rem;
+            border-top: 1px solid #1e293b;
+            background-color: #0f172a;
+        }
     </style>
 </head>
 <body>
+
+    <!-- Neues, edles Agentur-Branding ganz oben -->
+    <div class="brand-header">
+        <img src="logo.png" alt="landmansIT Logo" class="agency-logo">
+        <h2 class="agency-name">landmansIT</h2>
+        <div class="agency-badge">AI Automation Solutions</div>
+    </div>
 
     <div class="hero">
         <h1>Smarte KI-Automatisierung</h1>
@@ -158,5 +209,10 @@
         </div>
     </div>
 
+    <footer>
+        &copy; 2026 landmansIT. Alle Rechte vorbehalten. | Powered by RAG & GPT-5 mini
+    </footer>
+
 </body>
 </html>
+
