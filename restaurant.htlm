@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trattoria da Luigi - Authentische italienische Küche</title>
+    <style>
+        * { box-sizing: border-box; }
+        body { 
+            font-family: 'Playfair Display', 'Georgia', serif; 
+            margin: 0; 
+            padding: 0; 
+            background-color: #fbf9f6; 
+            color: #3e2723;
+        }
+
+        /* Elegante Navigationsleiste */
+        .navbar {
+            background-color: #1b3d2f; /* Edles italienisches Dunkelgrün */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 40px;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+        }
+
+        .nav-logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            color: #fbf9f6;
+        }
+
+        .nav-brand-name {
+            font-size: 1.3rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            font-weight: 400;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            color: rgba(251, 249, 246, 0.85);
+            text-decoration: none;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+            padding: 5px 0;
+        }
+
+        .nav-links a:hover {
+            color: #ffffff;
+            border-bottom: 1px solid #d4af37; /* Goldener Akzent */
+        }
+        
+        /* Großes, stimmungsvolles Restaurant-Hintergrundbild */
+        .hero-section {
+            background-image: linear-gradient(rgba(27, 61, 47, 0.4), rgba(27, 61, 47, 0.6)), url('https://unsplash.com');
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            height: 65vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+            padding: 20px;
+        }
+
+        .hero-section h1 {
+            font-size: 3.8rem;
+            margin: 0 0 10px 0;
+            letter-spacing: 3px;
+            font-weight: 400;
+            text-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+        }
+
+        .hero-section p {
+            font-size: 1.3rem;
+            margin: 0 0 35px 0;
+            font-style: italic;
+            letter-spacing: 1px;
+            font-family: 'Arial', sans-serif;
+            color: #fbf9f6;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: #d4af37; /* Edles Gold/Ocker */
+            color: #1b3d2f;
+            padding: 15px 35px;
+            text-align: center;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: 'Arial', sans-serif;
+            font-size: 0.9rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+        }
+
+        .btn:hover {
+            background-color: #ffffff;
+            color: #1b3d2f;
+            transform: translateY(-2px);
+        }
+
+        /* Schwebender Inhaltsbereich für das Menü-Gefühl */
+        .content-container {
+            max-width: 900px;
+            margin: -60px auto 80px auto;
+            background: white;
+            padding: 60px 40px;
+            border-radius: 4px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            text-align: center;
+            position: relative;
+            z-index: 10;
+            border: 1px solid #e0dcd3;
+        }
+
+        .content-container h2 {
+            font-size: 2.4rem;
+            color: #1b3d2f;
+            margin-top: 0;
+            margin-bottom: 15px;
+            font-weight: 400;
+            letter-spacing: 1px;
+        }
+
+        .divider {
+            width: 80px;
+            height: 2px;
+            background-color: #d4af37;
+            margin: 0 auto 25px auto;
+        }
+
+        .content-container p {
+            font-family: 'Arial', sans-serif;
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: #5d4037;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Menüleiste -->
+    <nav class="navbar">
+        <a href="#" class="nav-logo-container">
+            <span class="nav-brand-name">🇮🇹 Trattoria da Luigi</span>
+        </a>
+        <div class="nav-links">
+            <a href="#">Speisekarte</a>
+            <a href="#">Reservierung</a>
+            <a href="#">Events</a>
+            <a href="#">Kontakt</a>
+        </div>
+    </nav>
+
+    <!-- Hero-Bereich mit italienischem Flair -->
+    <div class="hero-section">
+        <h1>Trattoria da Luigi</h1>
+        <p>Tradition, Leidenschaft und ein Stück Italien im Herzen der Stadt</p>
+        <a href="#" class="btn">Tisch reservieren</a>
+    </div>
+
+    <!-- Einladender Text -->
+    <div class="content-container">
+        <h2>Benvenuti a Casa</h2>
+        <div class="divider"></div>
+        <p>Genießen Sie hausgemachte Pasta, kross gebackene Steinofenpizza und erlesene Weine in gemütlicher, familiärer Atmosphäre. Alle unsere Zutaten beziehen wir erntefrisch direkt von ausgewählten Familienbetrieben aus Italien.</p>
+    </div>
+
+  <script type="text/javascript">
+  (function(d, t) {
+      var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+      v.onload = function() {
+        window.voiceflow.chat.load({
+          verify: { projectID: '6a174a05da54c733c815a1e9' },
+          url: 'https://general-runtime.voiceflow.com',
+          voice: {
+            url: "https://runtime-api.voiceflow.com"
+          }
+        });
+      }
+      v.src = "https://cdn.voiceflow.com/widget-next/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+  })(document, 'script');
+</script>
+
+</body>
+</html>
